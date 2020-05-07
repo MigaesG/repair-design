@@ -11,7 +11,7 @@ function bs() {
     serveSass();
     browserSync.init({
       server: {
-        baseDir: "./src"
+        baseDir: "./"
       }
     });
 
