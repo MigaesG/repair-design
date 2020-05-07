@@ -1,32 +1,42 @@
-var gulp         = require('gulp');
-
-var browserSync  = require('browser-sync').create();
-
-var cleanCSS     = require('gulp-clean-css');
-
-var rename       = require("gulp-rename");
+const {src, dest, watch} = require('gulp');
+const browserSync        = require('browser-sync').create();
+const cleanCSS           = require('gulp-clean-css');
+const rename             = require("gulp-rename");
+const sass               = require('gulp-sass');
 
 
-gulp.task('serve', function() {
 
+
+function bs() {
+    serveSass();
     browserSync.init({
-
-      server: "./src/"
-
+      server: {
+        baseDir: "./src"
+      }
     });
 
-gulp.watch("src/*.html").on('change', browserSync.reload);
+    watch("./*.html").on('change', browserSync.reload);
+    watch("./sass/**/*.sass", serveSass);
+    watch("./js/*.js").on('change', browserSync.reload);
+};
 
-});
 
-gulp.task('minify-css', function() {
+function serveSass() {
+    return src("./sass/*.sass")
+      .pipe(sass())
+      .pipe(dest("./css"))
+      .pipe(browserSync.stream());
+}
 
-  return gulp.src("src/css/*.css")
-  
-  .pipe(rename({suffix: ".min"}))
-  
-  .pipe(cleanCSS())
-  
-  .pipe(gulp.dest("app/styles"));
-  
-  })
+
+
+ function mincss() {
+     return src("src/css/*.css")  
+      .pipe(rename({suffix: ".min"}))  
+      .pipe(cleanCSS())  
+      .pipe(dest("./dist/styles"));
+}
+
+
+exports.serve = bs;
+exports.mincss = mincss;
