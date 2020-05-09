@@ -357,7 +357,9 @@ template {
   margin-right: 45px; }
 
 .hero {
-  background: url("../img/hero-bg.jpg"); }
+  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  height: 100vh;
+  color: #ffffff; }
 
 body {
   font-family: 'Futura Book',  sans-serif;
