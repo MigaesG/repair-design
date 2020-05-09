@@ -373,6 +373,19 @@ template {
     left: 0;
     max-width: 80px;
     height: 100%; }
+  .hero__scroll-down {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    min-width: 247px;
+    min-height: 97px;
+    z-index: 99;
+    background-color: #131313;
+    text-transform: uppercase;
+    color: #ffffff; }
 
 .instagram {
   display: flex;
