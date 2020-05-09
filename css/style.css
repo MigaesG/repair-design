@@ -356,6 +356,9 @@ template {
 .contacts__phone {
   margin-right: 45px; }
 
+.hero {
+  background: url("../img/hero-bg.jpg"); }
+
 body {
   font-family: 'Futura Book',  sans-serif;
   font-size: 14px; }
