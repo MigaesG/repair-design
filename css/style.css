@@ -398,7 +398,10 @@ template {
     min-height: 97px;
     z-index: 99;
     background-color: #131313;
+    font-size: 12px;
+    font-family: 'Yeseva One', cursive;
     text-transform: uppercase;
+    text-decoration: none;
     color: #ffffff; }
 
 .instagram {
