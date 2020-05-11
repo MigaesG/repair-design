@@ -333,6 +333,8 @@ template {
       box-shadow: none; }
   .button--outline {
     border: 1px solid #ffffff;
+    padding-top: 12px;
+    padding-bottom: 12px;
     background-color: transparent;
     color: #ffffff; }
 
@@ -351,11 +353,13 @@ body {
 .section-title {
   text-align: center;
   text-transform: uppercase;
-  font-family: 'Yeseva One', cursive; }
+  font-family: 'Yeseva One', cursive;
+  font-size: 20px; }
   .section-title__image {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    margin-top: 15px; }
     .section-title__image::after, .section-title__image::before {
       content: '';
       width: 32px;
@@ -370,7 +374,7 @@ body {
   width: 100%;
   z-index: 99;
   background-color: #131313;
-  padding: 25px 0; }
+  padding: 21px 0; }
 
 .menu {
   display: flex;
@@ -399,31 +403,49 @@ body {
 .hero {
   position: relative;
   display: flex;
-  justify-content: center;
-  padding-top: 90px;
-  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  padding-top: 84px;
   height: 100vh;
   color: #ffffff; }
-  .hero::before {
+  .hero::after {
     content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(19, 19, 19, 0.7); }
+    height: 48.5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    background-color: #131313; }
   .hero__content {
     position: relative;
-    max-width: 670px; }
-  .hero__text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 55px;
+    background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover; }
+    .hero__content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(19, 19, 19, 0.7); }
+  .hero__title {
+    position: relative;
+    margin-bottom: 1rem;
     max-width: 500px;
-    font-size: 20px; }
+    line-height: 53px;
+    letter-spacing: 0.15rem; }
+  .hero__text {
+    position: relative;
+    max-width: 500px;
+    font-size: 20px;
+    line-height: 30px; }
   .hero__button {
+    position: relative;
     margin-right: 20px; }
   .hero__instagram {
-    position: absolute;
-    top: 0;
-    left: 0;
     max-width: 80px;
     height: 100%; }
   .hero__scroll-down {
