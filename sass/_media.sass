@@ -2,13 +2,15 @@
   html 
     font-size: 12px
   .nav
+    margin-right: 0
     &__item
-      margin-right: 2.14rem
+      margin-right: 2rem
   .contacts 
     &__phone 
       margin-right: 2rem
-
-
+    &__button
+      margin: 0
+  
 
 @media screen and ( max-width: 992px )
   .nav 
@@ -36,27 +38,33 @@
     // max-height: 530px
     &::after
       display: none 
+    &__content
+      padding-left: 1.5rem
+      padding-right: 1.5rem
     &__title
-      margin-bottom: 1rem
-      font-size: 1.642rem
-      line-height: 2.5rem
+      margin-bottom: 0.9rem
+      font-size: 1.7rem
+      line-height: 2.6rem
       max-width: 300px
+      letter-spacing: 0.14rem
     &__text
-      margin-right: 2.8rem
+      margin-top: 0
+      margin-right: 1.5rem
       margin-bottom: 3rem
-      font-size: 1.285rem
-      line-height: 2rem
+      font-size: 1.4rem
+      line-height: 2.08rem
+      letter-spacing: 0.045rem
     &__scroll-down
       display: none
     &__buttons
       display: flex
       flex-direction: column
     &__button
-      padding: 1.33rem
+      padding: 1.6rem
       margin-right: 0
+      font-style: 0.95rem
   .button
     &--primary
-      margin-bottom: 1.857rem
-    
-      
+      margin-bottom: 2rem
+// @media screen and (min-width: 576px )    
     

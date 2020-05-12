@@ -1,7 +1,7 @@
 .hero
   position: relative
   display: flex
-  padding-top: 5.9rem
+  padding-top: 5.5rem
   height: 100vh
   color: $light
   &::after
@@ -19,6 +19,8 @@
     justify-content: center
     flex-direction: column
     width: 100%
+    padding-left: 55px
+    padding-right: 55px
     background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
     &::before
       content: ''
@@ -30,18 +32,20 @@
       background-color: rgba($dark, 0.7)
   &__title 
     position: relative
-    margin-bottom: 0.8rem
     max-width: 35.76rem
+    margin-bottom: 1.15rem
     line-height: 3.78rem
-    letter-spacing: 0.10rem
   &__text
     position: relative
     max-width: 500px
+    margin: 0 0 3.6rem 0    
     font-size: 1.43rem
     line-height: 2.14rem
+    letter-spacing: 0.9px
   &__button
     position: relative
-    margin-right: 20px  
+  &__buttons
+    margin-bottom: 5.5rem
   &__instagram
     max-width: 80px
     height: 100%
@@ -52,7 +56,7 @@
     align-items: center
     left: 0
     bottom: 0
-    min-width: 17.642rem
+    min-width: 17.2rem
     min-height: 6.92rem
     z-index: 99
     background-color: $dark
@@ -68,7 +72,8 @@
       height: 2.14rem
       border: 2px solid $primary 
       border-radius: 50%  
-      margin-left: 12px
+      margin-left: 1.3rem
+      margin-right: 0.5rem
 .instagram 
   display: flex
   justify-content: center
@@ -88,12 +93,12 @@
       background-color: $primary
       margin-left: 8px
 .title 
-  margin: 0
   font-family: 'Yeseva One', cursive
   text-transform: uppercase
   font-size: 2.857rem
   &--primary
     color: $primary
+    
 
 
 
