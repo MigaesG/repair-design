@@ -347,7 +347,6 @@ template {
       box-shadow: none; }
 
 .container {
-  width: 100%;
   max-width: 1256px;
   margin: auto; }
 
@@ -588,5 +587,9 @@ body {
       padding: 1.6rem;
       margin-right: 0;
       font-style: 0.95rem; }
+  .button--outline:hover {
+    display: none; }
   .button--primary {
-    margin-bottom: 2rem; } }
+    margin-bottom: 2rem; }
+    .button--primary:hover {
+      display: none; } }
